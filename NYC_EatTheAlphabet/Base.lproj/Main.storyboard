@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Zso-C7-fTj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="cj potter Handwriting.ttf">
+            <string>CJPotterHandwriting</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Tutorial View Controller-->
+        <scene sceneID="IL0-WK-xoN">
+            <objects>
+                <viewController id="NTf-Kp-BNm" customClass="TutorialViewController" customModule="NYC_EatTheAlphabet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j7f-si-7jL"/>
+                        <viewControllerLayoutGuide type="bottom" id="ocM-1b-3TJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="loe-xS-hVq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dZG-kb-cy0">
+                                <rect key="frame" x="16" y="0.0" width="343" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="27"/>
+                                <state key="normal" title="This view will be the tutorial viewController.    Tap anywhere to enter.">
+                                    <color key="titleColor" red="0.71764705882352942" green="0.2627450980392157" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tutorialButtonTapped:" destination="NTf-Kp-BNm" eventType="touchUpInside" id="MfB-tF-8qa"/>
+                                    <segue destination="g3G-79-19X" kind="show" identifier="showLogin" id="mmN-XX-8IY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2fF-kc-Vr1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uJl-KZ-f45" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776.79999999999995" y="62.518740629685162"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="nLg-ME-bMS">
+            <objects>
+                <viewController storyboardIdentifier="LoginView" id="g3G-79-19X" customClass="LoginViewController" customModule="NYC_EatTheAlphabet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FPw-3r-gOE"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Oo-z5-bUN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="roY-1H-btp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDo-t5-7GK">
+                                <rect key="frame" x="106" y="369" width="163" height="36"/>
+                                <color key="backgroundColor" red="0.71764705880000002" green="0.26274509800000001" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="20"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" red="0.88627450980392153" green="0.89411764705882346" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account yet?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6id-qp-KrK">
+                                <rect key="frame" x="66" y="505" width="243" height="16.5"/>
+                                <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.68235294117647061" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ton-dy-hPb">
+                                <rect key="frame" x="26" y="143" width="323" height="53.5"/>
+                                <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.68235294120000001" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ur-11-7gm">
+                                <rect key="frame" x="26" y="292.5" width="97" height="20"/>
+                                <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.68235294120000001" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQB-Ig-ipw">
+                                <rect key="frame" x="26" y="216" width="323" height="20"/>
+                                <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.68235294120000001" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuL-WE-ZGE">
+                                <rect key="frame" x="275" y="292.5" width="74" height="16.5"/>
+                                <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="14"/>
+                                <color key="textColor" red="0.71764705882352942" green="0.2627450980392157" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ORP-rd-2Je">
+                                <rect key="frame" x="26" y="309" width="323" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0CN-hP-qXy"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cUh-hK-Mf1">
+                                <rect key="frame" x="26" y="234" width="323" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hFk-Yr-9Ah"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3U-vz-ASS">
+                                <rect key="frame" x="141" y="536.5" width="93" height="32"/>
+                                <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="17"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="0.71764705882352942" green="0.2627450980392157" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S3U-vz-ASS" firstAttribute="leading" secondItem="roY-1H-btp" secondAttribute="leadingMargin" constant="125" id="2HC-Vw-rv0"/>
+                            <constraint firstItem="aQB-Ig-ipw" firstAttribute="top" secondItem="Ton-dy-hPb" secondAttribute="bottom" constant="19.5" id="2IE-sU-y3G"/>
+                            <constraint firstItem="Ton-dy-hPb" firstAttribute="height" secondItem="roY-1H-btp" secondAttribute="height" multiplier="0.08" id="7dw-EJ-mZd"/>
+                            <constraint firstItem="S3U-vz-ASS" firstAttribute="top" secondItem="6id-qp-KrK" secondAttribute="bottom" constant="15" id="9C8-bD-7Ce"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="S3U-vz-ASS" secondAttribute="trailing" constant="125" id="BIb-7d-hBz"/>
+                            <constraint firstItem="9Ur-11-7gm" firstAttribute="top" secondItem="cUh-hK-Mf1" secondAttribute="bottom" constant="18.5" id="DJ7-Be-Nmg"/>
+                            <constraint firstItem="aQB-Ig-ipw" firstAttribute="leading" secondItem="roY-1H-btp" secondAttribute="leadingMargin" constant="10" id="ETO-2Y-I1v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ORP-rd-2Je" secondAttribute="trailing" constant="10" id="Ee7-pW-SMk"/>
+                            <constraint firstItem="ORP-rd-2Je" firstAttribute="leading" secondItem="roY-1H-btp" secondAttribute="leadingMargin" constant="10" id="Iw3-dF-3hc"/>
+                            <constraint firstItem="cUh-hK-Mf1" firstAttribute="top" secondItem="aQB-Ig-ipw" secondAttribute="bottom" constant="-2" id="LjL-Cd-j0B"/>
+                            <constraint firstItem="ORP-rd-2Je" firstAttribute="top" secondItem="cUh-hK-Mf1" secondAttribute="bottom" constant="35" id="NlX-Yr-p72"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cUh-hK-Mf1" secondAttribute="trailing" constant="10" id="Q9A-ao-EI9"/>
+                            <constraint firstItem="cUh-hK-Mf1" firstAttribute="leading" secondItem="roY-1H-btp" secondAttribute="leadingMargin" constant="10" id="Wfm-3c-559"/>
+                            <constraint firstItem="6id-qp-KrK" firstAttribute="leading" secondItem="roY-1H-btp" secondAttribute="leadingMargin" constant="50" id="Yo6-Of-E1g"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ton-dy-hPb" secondAttribute="trailing" constant="10" id="Yq8-q9-6no"/>
+                            <constraint firstItem="6id-qp-KrK" firstAttribute="top" secondItem="uDo-t5-7GK" secondAttribute="bottom" constant="100" id="c87-Na-Mnx"/>
+                            <constraint firstItem="9Ur-11-7gm" firstAttribute="leading" secondItem="roY-1H-btp" secondAttribute="leadingMargin" constant="10" id="czC-yy-nKs"/>
+                            <constraint firstItem="fuL-WE-ZGE" firstAttribute="top" secondItem="cUh-hK-Mf1" secondAttribute="bottom" constant="18.5" id="dvw-IX-Cl2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aQB-Ig-ipw" secondAttribute="trailing" constant="10" id="ecc-A0-rqW"/>
+                            <constraint firstItem="Ton-dy-hPb" firstAttribute="leading" secondItem="roY-1H-btp" secondAttribute="leadingMargin" constant="10" id="kRu-iB-Ob1"/>
+                            <constraint firstItem="uDo-t5-7GK" firstAttribute="top" secondItem="ORP-rd-2Je" secondAttribute="bottom" constant="20" id="mcD-NW-tyf"/>
+                            <constraint firstItem="Ton-dy-hPb" firstAttribute="top" secondItem="roY-1H-btp" secondAttribute="topMargin" constant="143" id="miZ-fR-mPm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6id-qp-KrK" secondAttribute="trailing" constant="50" id="n1l-ii-tAv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uDo-t5-7GK" secondAttribute="trailing" constant="90" id="qqM-nc-reu"/>
+                            <constraint firstItem="uDo-t5-7GK" firstAttribute="leading" secondItem="roY-1H-btp" secondAttribute="leadingMargin" constant="90" id="uxd-4y-P6X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fuL-WE-ZGE" secondAttribute="trailing" constant="10" id="wDd-Fk-CMn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="cUh-hK-Mf1" id="S5E-xX-l0j"/>
+                        <outlet property="passwordTextField" destination="ORP-rd-2Je" id="ccP-rn-l1R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s4e-tF-L5x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1512.8" y="62.518740629685162"/>
+        </scene>
+        <!--Pick a Letter-->
+        <scene sceneID="B4e-nW-Dy6">
+            <objects>
+                <tableViewController title="Pick a Letter" id="JVn-Sz-WnG" customClass="AlphabetTableViewController" customModule="NYC_EatTheAlphabet" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="r1E-JS-yk1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="customCell" rowHeight="97" id="sWv-Dd-NSn" customClass="AlphabetCell" customModule="NYC_EatTheAlphabet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="97"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sWv-Dd-NSn" id="iyp-ao-bbJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="96"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plateSetting.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2an-7L-DhE">
+                                            <rect key="frame" x="8" y="0.0" width="203" height="89"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dce-mT-Sm1">
+                                            <rect key="frame" x="219" y="0.0" width="81" height="89"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="75"/>
+                                            <color key="textColor" red="0.0" green="0.68235294117647061" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageLabel" destination="2an-7L-DhE" id="LHX-gH-OUW"/>
+                                    <outlet property="letterLabel" destination="dce-mT-Sm1" id="QFL-ES-1vI"/>
+                                    <segue destination="LbX-LC-tDc" kind="show" identifier="toRestaurant" id="FdC-Op-YqA"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JVn-Sz-WnG" id="Qlb-gs-eXK"/>
+                            <outlet property="delegate" destination="JVn-Sz-WnG" id="714-YJ-HD4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Eat The Alphabet" id="dql-L4-PC4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CIn-aP-KVq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2137" y="63"/>
+        </scene>
+        <!--Restaurant View Controller-->
+        <scene sceneID="Kba-Vi-4F5">
+            <objects>
+                <viewController id="LbX-LC-tDc" customClass="RestaurantViewController" customModule="NYC_EatTheAlphabet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ove-RL-Ru4"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z32-43-IxZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0o4-VD-f3G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cuisine" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="50" translatesAutoresizingMaskIntoConstraints="NO" id="osY-IZ-vyQ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="51"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="25" translatesAutoresizingMaskIntoConstraints="NO" id="Kgg-pW-wRq">
+                                <rect key="frame" x="24" y="258" width="327" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gnx-QL-YIV"/>
+                    <connections>
+                        <outlet property="cuisineLabel" destination="osY-IZ-vyQ" id="6bA-Ra-Rf2"/>
+                        <outlet property="restaurantLabel" destination="Kgg-pW-wRq" id="Az8-j6-o3Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QJp-Ys-pOZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2953" y="63"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="a0S-kP-uta">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zso-C7-fTj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ovS-GM-bje">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NTf-Kp-BNm" kind="relationship" relationship="rootViewController" id="uBH-HL-m9C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w4I-Er-SIZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33" y="63"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plateSetting.jpg" width="300" height="209"/>
+    </resources>
+</document>
