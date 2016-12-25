@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,22 +29,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dZG-kb-cy0">
-                                <rect key="frame" x="16" y="0.0" width="343" height="667"/>
+                            <button contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dZG-kb-cy0">
+                                <rect key="frame" x="0.0" y="186" width="375" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="27"/>
-                                <state key="normal" title="This view will be the tutorial viewController.    Tap anywhere to enter.">
-                                    <color key="titleColor" red="0.71764705882352942" green="0.2627450980392157" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.89411764709999997" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="17"/>
+                                <state key="normal" title="Tap here to enter">
+                                    <color key="titleColor" red="0.0" green="0.68235294120000001" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="tutorialButtonTapped:" destination="NTf-Kp-BNm" eventType="touchUpInside" id="MfB-tF-8qa"/>
                                     <segue destination="g3G-79-19X" kind="show" identifier="showLogin" id="mmN-XX-8IY"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TEw-c7-cTo">
+                                <rect key="frame" x="16" y="0.0" width="343" height="667"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TEw-c7-cTo" firstAttribute="leading" secondItem="loe-xS-hVq" secondAttribute="leadingMargin" id="0xY-UL-wSR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TEw-c7-cTo" secondAttribute="trailing" id="3FH-w2-57N"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="TEw-c7-cTo" secondAttribute="bottom" id="dTD-2P-lMQ"/>
+                            <constraint firstAttribute="topMargin" secondItem="TEw-c7-cTo" secondAttribute="top" id="rFx-da-ywG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2fF-kc-Vr1"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="TEw-c7-cTo" id="u9Q-uH-RXT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJl-KZ-f45" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -62,7 +75,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDo-t5-7GK">
-                                <rect key="frame" x="106" y="369" width="163" height="36"/>
+                                <rect key="frame" x="106" y="331" width="163" height="36"/>
                                 <color key="backgroundColor" red="0.71764705880000002" green="0.26274509800000001" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="20"/>
                                 <state key="normal" title="Sign In">
@@ -74,39 +87,42 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="JVn-Sz-WnG" kind="show" identifier="showAlphabet" id="vP9-a9-jd1"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account yet?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6id-qp-KrK">
-                                <rect key="frame" x="66" y="505" width="243" height="16.5"/>
-                                <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="14"/>
+                                <rect key="frame" x="56" y="447" width="263" height="14"/>
+                                <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.68235294117647061" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ton-dy-hPb">
-                                <rect key="frame" x="26" y="143" width="323" height="53.5"/>
+                                <rect key="frame" x="26" y="105" width="323" height="54"/>
                                 <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.68235294120000001" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ur-11-7gm">
-                                <rect key="frame" x="26" y="292.5" width="97" height="20"/>
+                                <rect key="frame" x="26" y="255" width="97" height="20"/>
                                 <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.68235294120000001" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQB-Ig-ipw">
-                                <rect key="frame" x="26" y="216" width="323" height="20"/>
+                                <rect key="frame" x="26" y="178" width="323" height="20"/>
                                 <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.68235294120000001" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuL-WE-ZGE">
-                                <rect key="frame" x="275" y="292.5" width="74" height="16.5"/>
+                                <rect key="frame" x="275" y="255" width="74" height="17"/>
                                 <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="14"/>
                                 <color key="textColor" red="0.71764705882352942" green="0.2627450980392157" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ORP-rd-2Je">
-                                <rect key="frame" x="26" y="309" width="323" height="40"/>
+                                <rect key="frame" x="26" y="271" width="323" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="0CN-hP-qXy"/>
                                 </constraints>
@@ -115,7 +131,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cUh-hK-Mf1">
-                                <rect key="frame" x="26" y="234" width="323" height="40"/>
+                                <rect key="frame" x="26" y="196" width="323" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="hFk-Yr-9Ah"/>
                                 </constraints>
@@ -124,7 +140,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3U-vz-ASS">
-                                <rect key="frame" x="141" y="536.5" width="93" height="32"/>
+                                <rect key="frame" x="116" y="476" width="143" height="32"/>
                                 <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="17"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="0.71764705882352942" green="0.2627450980392157" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
@@ -133,11 +149,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="S3U-vz-ASS" firstAttribute="leading" secondItem="roY-1H-btp" secondAttribute="leadingMargin" constant="125" id="2HC-Vw-rv0"/>
+                            <constraint firstItem="S3U-vz-ASS" firstAttribute="leading" secondItem="roY-1H-btp" secondAttribute="leadingMargin" constant="100" id="2HC-Vw-rv0"/>
                             <constraint firstItem="aQB-Ig-ipw" firstAttribute="top" secondItem="Ton-dy-hPb" secondAttribute="bottom" constant="19.5" id="2IE-sU-y3G"/>
                             <constraint firstItem="Ton-dy-hPb" firstAttribute="height" secondItem="roY-1H-btp" secondAttribute="height" multiplier="0.08" id="7dw-EJ-mZd"/>
                             <constraint firstItem="S3U-vz-ASS" firstAttribute="top" secondItem="6id-qp-KrK" secondAttribute="bottom" constant="15" id="9C8-bD-7Ce"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="S3U-vz-ASS" secondAttribute="trailing" constant="125" id="BIb-7d-hBz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="S3U-vz-ASS" secondAttribute="trailing" constant="100" id="BIb-7d-hBz"/>
                             <constraint firstItem="9Ur-11-7gm" firstAttribute="top" secondItem="cUh-hK-Mf1" secondAttribute="bottom" constant="18.5" id="DJ7-Be-Nmg"/>
                             <constraint firstItem="aQB-Ig-ipw" firstAttribute="leading" secondItem="roY-1H-btp" secondAttribute="leadingMargin" constant="10" id="ETO-2Y-I1v"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ORP-rd-2Je" secondAttribute="trailing" constant="10" id="Ee7-pW-SMk"/>
@@ -146,16 +162,16 @@
                             <constraint firstItem="ORP-rd-2Je" firstAttribute="top" secondItem="cUh-hK-Mf1" secondAttribute="bottom" constant="35" id="NlX-Yr-p72"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cUh-hK-Mf1" secondAttribute="trailing" constant="10" id="Q9A-ao-EI9"/>
                             <constraint firstItem="cUh-hK-Mf1" firstAttribute="leading" secondItem="roY-1H-btp" secondAttribute="leadingMargin" constant="10" id="Wfm-3c-559"/>
-                            <constraint firstItem="6id-qp-KrK" firstAttribute="leading" secondItem="roY-1H-btp" secondAttribute="leadingMargin" constant="50" id="Yo6-Of-E1g"/>
+                            <constraint firstItem="6id-qp-KrK" firstAttribute="leading" secondItem="roY-1H-btp" secondAttribute="leadingMargin" constant="40" id="Yo6-Of-E1g"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ton-dy-hPb" secondAttribute="trailing" constant="10" id="Yq8-q9-6no"/>
-                            <constraint firstItem="6id-qp-KrK" firstAttribute="top" secondItem="uDo-t5-7GK" secondAttribute="bottom" constant="100" id="c87-Na-Mnx"/>
+                            <constraint firstItem="6id-qp-KrK" firstAttribute="top" secondItem="uDo-t5-7GK" secondAttribute="bottom" constant="80" id="c87-Na-Mnx"/>
                             <constraint firstItem="9Ur-11-7gm" firstAttribute="leading" secondItem="roY-1H-btp" secondAttribute="leadingMargin" constant="10" id="czC-yy-nKs"/>
                             <constraint firstItem="fuL-WE-ZGE" firstAttribute="top" secondItem="cUh-hK-Mf1" secondAttribute="bottom" constant="18.5" id="dvw-IX-Cl2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aQB-Ig-ipw" secondAttribute="trailing" constant="10" id="ecc-A0-rqW"/>
                             <constraint firstItem="Ton-dy-hPb" firstAttribute="leading" secondItem="roY-1H-btp" secondAttribute="leadingMargin" constant="10" id="kRu-iB-Ob1"/>
                             <constraint firstItem="uDo-t5-7GK" firstAttribute="top" secondItem="ORP-rd-2Je" secondAttribute="bottom" constant="20" id="mcD-NW-tyf"/>
-                            <constraint firstItem="Ton-dy-hPb" firstAttribute="top" secondItem="roY-1H-btp" secondAttribute="topMargin" constant="143" id="miZ-fR-mPm"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="6id-qp-KrK" secondAttribute="trailing" constant="50" id="n1l-ii-tAv"/>
+                            <constraint firstItem="Ton-dy-hPb" firstAttribute="top" secondItem="roY-1H-btp" secondAttribute="topMargin" constant="105" id="miZ-fR-mPm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6id-qp-KrK" secondAttribute="trailing" constant="40" id="n1l-ii-tAv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uDo-t5-7GK" secondAttribute="trailing" constant="90" id="qqM-nc-reu"/>
                             <constraint firstItem="uDo-t5-7GK" firstAttribute="leading" secondItem="roY-1H-btp" secondAttribute="leadingMargin" constant="90" id="uxd-4y-P6X"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fuL-WE-ZGE" secondAttribute="trailing" constant="10" id="wDd-Fk-CMn"/>
@@ -183,25 +199,35 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="97"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sWv-Dd-NSn" id="iyp-ao-bbJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="96"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="96.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plateSetting.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2an-7L-DhE">
-                                            <rect key="frame" x="8" y="0.0" width="203" height="89"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dce-mT-Sm1">
-                                            <rect key="frame" x="219" y="0.0" width="81" height="89"/>
+                                            <rect key="frame" x="15" y="4" width="81" height="89"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="75"/>
                                             <color key="textColor" red="0.0" green="0.68235294117647061" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Try:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOv-7u-bno">
+                                            <rect key="frame" x="97" y="8" width="168" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.68235294117647061" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Erica Suggests:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FW-o3-igR">
+                                            <rect key="frame" x="97" y="45" width="245" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="17"/>
+                                            <color key="textColor" red="0.71764705880000002" green="0.26274509800000001" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="imageLabel" destination="2an-7L-DhE" id="LHX-gH-OUW"/>
                                     <outlet property="letterLabel" destination="dce-mT-Sm1" id="QFL-ES-1vI"/>
+                                    <outlet property="suggestedCuisineLabel" destination="5FW-o3-igR" id="KGa-TS-xJy"/>
                                     <segue destination="LbX-LC-tDc" kind="show" identifier="toRestaurant" id="FdC-Op-YqA"/>
                                 </connections>
                             </tableViewCell>
@@ -215,7 +241,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CIn-aP-KVq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2137" y="63"/>
+            <point key="canvasLocation" x="2229.5999999999999" y="62.518740629685162"/>
         </scene>
         <!--Restaurant View Controller-->
         <scene sceneID="Kba-Vi-4F5">
@@ -229,32 +255,183 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cuisine" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="50" translatesAutoresizingMaskIntoConstraints="NO" id="osY-IZ-vyQ">
-                                <rect key="frame" x="0.0" y="64" width="375" height="165"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuisine" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="50" translatesAutoresizingMaskIntoConstraints="NO" id="osY-IZ-vyQ">
+                                <rect key="frame" x="16" y="70" width="343" height="70"/>
+                                <color key="backgroundColor" red="0.0" green="0.68235294117647061" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="pyW-HQ-Saw"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="51"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.71764705882352942" green="0.2627450980392157" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="25" translatesAutoresizingMaskIntoConstraints="NO" id="Kgg-pW-wRq">
-                                <rect key="frame" x="24" y="258" width="327" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="27"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="50" translatesAutoresizingMaskIntoConstraints="NO" id="8gW-SF-v8a">
+                                <rect key="frame" x="11" y="226" width="348" height="35"/>
+                                <color key="backgroundColor" red="0.0" green="0.68235294120000001" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="yk9-2s-bcA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="33"/>
+                                <color key="textColor" red="0.71764705880000002" green="0.26274509800000001" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Restaurant Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="25" translatesAutoresizingMaskIntoConstraints="NO" id="Kgg-pW-wRq">
+                                <rect key="frame" x="11" y="146" width="348" height="72"/>
+                                <color key="backgroundColor" red="0.71764705882352942" green="0.2627450980392157" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="rLn-Ij-wM4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="27"/>
+                                <color key="textColor" red="0.88627450980392153" green="0.89411764705882346" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Dined With:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="25" translatesAutoresizingMaskIntoConstraints="NO" id="0rz-u8-DE6">
+                                <rect key="frame" x="169" y="269" width="190" height="29"/>
+                                <color key="backgroundColor" red="0.88627450980392153" green="0.24705882352941178" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="h6K-c0-PpL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="21"/>
+                                <color key="textColor" red="0.8862745098" green="0.89411764709999997" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Amy, Monique" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="25" translatesAutoresizingMaskIntoConstraints="NO" id="82T-FU-Aoq">
+                                <rect key="frame" x="169" y="306" width="190" height="113"/>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.41960784313725491" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="21"/>
+                                <color key="textColor" red="0.8862745098" green="0.89411764709999997" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="streudel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="25" translatesAutoresizingMaskIntoConstraints="NO" id="o0H-nj-j51">
+                                <rect key="frame" x="11" y="496" width="135" height="163"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.41960784309999999" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="21"/>
+                                <color key="textColor" red="0.8862745098" green="0.89411764709999997" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="avJ-om-Kvp">
+                                <rect key="frame" x="154" y="459" width="205" height="200"/>
+                                <color key="backgroundColor" red="0.0" green="0.68235294117647061" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="I3j-mY-cKK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jx0-oJ-Df1">
+                                <rect key="frame" x="11" y="269" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jx0-oJ-Df1" secondAttribute="height" multiplier="1:1" id="1df-AU-p4O"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="I Ate:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="25" translatesAutoresizingMaskIntoConstraints="NO" id="KpW-zc-rBg">
+                                <rect key="frame" x="11" y="459" width="135" height="29"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.2470588235" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rki-El-E69"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CJPotterHandwriting" family="CJ Potter Handwriting" pointSize="21"/>
+                                <color key="textColor" red="0.8862745098" green="0.89411764709999997" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.8862745098" green="0.89411764709999997" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="osY-IZ-vyQ" firstAttribute="leading" secondItem="0o4-VD-f3G" secondAttribute="leadingMargin" id="0Sf-vZ-NI2"/>
+                            <constraint firstItem="o0H-nj-j51" firstAttribute="top" secondItem="KpW-zc-rBg" secondAttribute="bottom" constant="5" id="12w-G2-RO3"/>
+                            <constraint firstItem="avJ-om-Kvp" firstAttribute="top" secondItem="KpW-zc-rBg" secondAttribute="top" id="4Lf-8D-i3p"/>
+                            <constraint firstItem="8gW-SF-v8a" firstAttribute="leading" secondItem="0o4-VD-f3G" secondAttribute="leadingMargin" id="5zA-6G-T8m"/>
+                            <constraint firstItem="jx0-oJ-Df1" firstAttribute="top" secondItem="8gW-SF-v8a" secondAttribute="bottom" constant="20" id="7cl-Da-4ZG"/>
+                            <constraint firstItem="Kgg-pW-wRq" firstAttribute="top" secondItem="osY-IZ-vyQ" secondAttribute="bottom" constant="5" id="7xJ-Bk-22j"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kgg-pW-wRq" secondAttribute="trailing" id="8Hi-jl-V6Z"/>
+                            <constraint firstItem="0rz-u8-DE6" firstAttribute="leading" secondItem="jx0-oJ-Df1" secondAttribute="trailing" constant="5" id="9zx-vf-ljF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0rz-u8-DE6" secondAttribute="trailing" id="A1Y-Ht-vFa"/>
+                            <constraint firstItem="82T-FU-Aoq" firstAttribute="bottom" secondItem="jx0-oJ-Df1" secondAttribute="bottom" id="BEa-Xg-8f9"/>
+                            <constraint firstItem="82T-FU-Aoq" firstAttribute="top" secondItem="0rz-u8-DE6" secondAttribute="bottom" constant="5" id="DIN-yg-qfi"/>
+                            <constraint firstItem="avJ-om-Kvp" firstAttribute="top" secondItem="82T-FU-Aoq" secondAttribute="bottom" constant="35" id="E8A-W6-mUP"/>
+                            <constraint firstItem="jx0-oJ-Df1" firstAttribute="leading" secondItem="0o4-VD-f3G" secondAttribute="leadingMargin" id="FeT-O5-TZj"/>
+                            <constraint firstItem="8gW-SF-v8a" firstAttribute="top" secondItem="Kgg-pW-wRq" secondAttribute="bottom" constant="5" id="HSv-4Y-Scy"/>
+                            <constraint firstItem="avJ-om-Kvp" firstAttribute="bottom" secondItem="o0H-nj-j51" secondAttribute="bottom" id="J0V-a8-oE3"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="o0H-nj-j51" secondAttribute="bottom" constant="8" id="O5l-kB-N6O"/>
+                            <constraint firstItem="82T-FU-Aoq" firstAttribute="leading" secondItem="jx0-oJ-Df1" secondAttribute="trailing" constant="5" id="R3E-7e-OaW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8gW-SF-v8a" secondAttribute="trailing" id="Rzv-DN-Ldt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="osY-IZ-vyQ" secondAttribute="trailing" id="UEr-wf-yUU"/>
+                            <constraint firstItem="avJ-om-Kvp" firstAttribute="leading" secondItem="o0H-nj-j51" secondAttribute="trailing" constant="5" id="XR5-XU-w9f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="avJ-om-Kvp" secondAttribute="trailing" id="Z7i-qd-dyO"/>
+                            <constraint firstItem="avJ-om-Kvp" firstAttribute="leading" secondItem="KpW-zc-rBg" secondAttribute="trailing" constant="5" id="ZNb-uj-pjA"/>
+                            <constraint firstItem="0rz-u8-DE6" firstAttribute="top" secondItem="8gW-SF-v8a" secondAttribute="bottom" constant="20" id="a0Z-hK-A7E"/>
+                            <constraint firstItem="KpW-zc-rBg" firstAttribute="leading" secondItem="0o4-VD-f3G" secondAttribute="leadingMargin" id="sVd-hP-Pkd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="82T-FU-Aoq" secondAttribute="trailing" id="tsY-eY-4Ma"/>
+                            <constraint firstItem="Kgg-pW-wRq" firstAttribute="leading" secondItem="0o4-VD-f3G" secondAttribute="leadingMargin" id="xzL-XK-2DV"/>
+                            <constraint firstItem="o0H-nj-j51" firstAttribute="leading" secondItem="0o4-VD-f3G" secondAttribute="leadingMargin" id="xze-p5-Mfm"/>
+                            <constraint firstItem="osY-IZ-vyQ" firstAttribute="top" secondItem="0o4-VD-f3G" secondAttribute="topMargin" constant="70" id="yOG-PT-kKy"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gnx-QL-YIV"/>
                     <connections>
                         <outlet property="cuisineLabel" destination="osY-IZ-vyQ" id="6bA-Ra-Rf2"/>
+                        <outlet property="dateLabel" destination="8gW-SF-v8a" id="q0L-Cb-WXu"/>
+                        <outlet property="foodImage" destination="avJ-om-Kvp" id="iyY-dv-Em3"/>
+                        <outlet property="foodLabel" destination="o0H-nj-j51" id="2BG-4A-P6X"/>
+                        <outlet property="friendsLabel" destination="82T-FU-Aoq" id="6MP-pD-JRk"/>
                         <outlet property="restaurantLabel" destination="Kgg-pW-wRq" id="Az8-j6-o3Z"/>
+                        <outlet property="restaurantMap" destination="jx0-oJ-Df1" id="Swv-HQ-lx6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJp-Ys-pOZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2953" y="63"/>
+            <point key="canvasLocation" x="2952.8000000000002" y="62.518740629685162"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a0S-kP-uta">
@@ -275,7 +452,4 @@
             <point key="canvasLocation" x="33" y="63"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="plateSetting.jpg" width="300" height="209"/>
-    </resources>
 </document>

@@ -10,6 +10,6 @@ import UIKit
 
 class AlphabetCell: UITableViewCell {
 
-    @IBOutlet weak var imageLabel: UIImageView!
     @IBOutlet weak var letterLabel: UILabel!
+    @IBOutlet weak var suggestedCuisineLabel: UILabel!
 }

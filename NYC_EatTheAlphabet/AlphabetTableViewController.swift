@@ -9,6 +9,8 @@
 import UIKit
 
 class AlphabetTableViewController: UITableViewController {
+    
+    var name = ""
 
     //MARK: This is where I create my restaurant array
     var alphabet:[String:(String, String, String)] = [
@@ -35,9 +37,9 @@ class AlphabetTableViewController: UITableViewController {
         "U": ("Ukranian", "Veselka", "ukraine"),
         "V": ("Vegan", "Franchia", "vegan"),
         "W": ("Whole Foods", "Whole Foods Market", "wholefoods"),
-        "X": ("TBD", "TBD", "plateSetting"),
-        "Y": ("TBD", "TBD", "plateSetting"),
-        "Z": ("TBD", "TBD", "plateSetting")]
+        "X": ("X'ian", "Xi'an Famous Foods", "plateSetting"),
+        "Y": ("Yemeni", "Yemen Cuisine", "plateSetting"),
+        "Z": ("Zürich (Swiss)", "Cafe Select", "plateSetting")]
   
   var alphabetArray:[[String:(String, String, String)]] = [
       ["A": ("American", "Jackson Hole", "america")],
@@ -63,26 +65,30 @@ class AlphabetTableViewController: UITableViewController {
       ["U": ("Ukranian", "Veselka", "ukraine")],
       ["V": ("Vegan", "Franchia", "vegan")],
       ["W": ("Whole Foods", "Whole Foods Market", "wholefoods")],
-      ["X": ("TBD", "TBD", "plateSetting")],
-      ["Y": ("TBD", "TBD", "plateSetting")],
-      ["Z": ("TBD", "TBD", "plateSetting")]
+      ["X": ("X'ian", "Xi'an Famous Foods", "plateSetting")],
+      ["Y": ("Yemeni", "Yemen Cuisine", "plateSetting")],
+      ["Z": ("Zürich (Swiss)", "Cafe Select", "plateSetting")]
   ]
-  
-  
+   
     struct RestaurantObjects {
         var restaurantLetter : String!
         var restaurantCuisine : (String, String, String)!
     }
     
     var restaurantArray = [RestaurantObjects]()
+    var newRestaurantArray = [RestaurantObjects]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = retroCoral
+        navigationController?.isNavigationBarHidden = true
       
         for (letter, cuisine) in alphabet {
              restaurantArray.append(RestaurantObjects(restaurantLetter: letter, restaurantCuisine: cuisine))
          }
+        
+        
+        
      }
 
     // MARK: - Table view data source
@@ -91,8 +97,7 @@ class AlphabetTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return restaurantArray.count
-         return 26
+          return 26
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -102,8 +107,14 @@ class AlphabetTableViewController: UITableViewController {
         if let letterForLabel = restaurantArray[indexPath.row].restaurantLetter {
             cell.letterLabel.text = String(letterForLabel)
         }
-        if let imageForLabel = restaurantArray[indexPath.row].restaurantCuisine {
-            cell.imageLabel.image = UIImage(named: imageForLabel.2)
+        
+        //BAD CODE
+        let letterDict = alphabetArray[indexPath.row]
+        
+//         cell.letterLabel.text = String(describing: letterLabel)
+        
+        if let cuisineForLabel = restaurantArray[indexPath.row].restaurantCuisine {
+            cell.suggestedCuisineLabel.text = String(cuisineForLabel.0)
         }
         return cell
     }
