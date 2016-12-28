@@ -28,11 +28,7 @@ class LoginViewController: UIViewController {
         passwordTextField.autocapitalizationType = .none
       }
 
-    
-    
-    
-
-     // MARK: - Navigation
+      // MARK: - Navigation
 
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showAlphabet" {

@@ -29,10 +29,11 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate, UINavigatio
     
     var userChoseImage:Bool = false
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = false
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +42,6 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate, UINavigatio
         print(cuisineName)
         cuisineLabel.text = cuisineName
         restaurantLabel.text = restaurantName
-        navigationItem.title = "Click Item to Edit"
         navigationController?.isNavigationBarHidden = false
         
         //sets up map
@@ -244,12 +244,12 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate, UINavigatio
         
         let doneAction = UIAlertAction(title: "Done", style: .default) { (action) in
             print("User pushed 'DONE' on enterCuisineAlertController")
-            let friendsField = setDateAlert.textFields![0] as UITextField
-            print("the user entered \(friendsField)")
-            guard let friends = friendsField.text else { return }
+            let dateField = setDateAlert.textFields![0] as UITextField
+            print("the user entered \(dateField)")
+            guard let date = dateField.text else { return }
             
             //TODO: - save this cuisine below to 1) core data and 2) have it persist on the screen
-            self.friendsLabel.text = friends
+            self.dateLabel.text = date
         }
         
         setDateAlert.addTextField { (textField) in

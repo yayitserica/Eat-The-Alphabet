@@ -13,35 +13,6 @@ class AlphabetTableViewController: UITableViewController {
     var name = ""
 
     //MARK: This is where I create my restaurant array
-  
-      var alphabetArray:[[String:(String, String, String)]] = [
-          ["A": ("American", "Jackson Hole", "america")],
-          ["B": ("Belgian", "BXL Zoute", "belgium")],
-          ["C": ("Chinese", "Grand Sichuan", "china")],
-          ["D": ("Dim Sum", "Jing Fong", "dimsum")],
-          ["E": ("Ethopian", "Meskerem", "ethiopia")],
-          ["F": ("French", "Le Pain Quotidien", "france")],
-          ["G": ("Greek", "Village Taverna", "greece")],
-          ["H": ("Hungarian", "Budapest Cafe", "hungary")],
-          ["I": ("Israeli", "Nanoosh", "israel")],
-          ["J": ("Japanese", "Haru Sushi", "japan")],
-          ["K": ("Korean", "BCD Tofu House", "korea")],
-          ["L": ("Lebanese","Au Za'atar", "lebanon")],
-          ["M": ("Moroccan", "Cafe Mogador", "morocco")],
-          ["N": ("Nepali", "Mustang Thakali Kitchen", "nepal")],
-          ["O": ("Österreich (Austrian)", "Cafe Kayja", "austria")],
-          ["P": ("Pilipino", "Krystal's Cafe & Pastry Shop", "philippines")],
-          ["Q": ("Quito (Ecuador)", "Sabor Latino", "ecuador")],
-          ["R": ("Russian", "Onegin", "russia")],
-          ["S": ("Singaporean", "Chomp Chomp", "singapore")],
-          ["T": ("Turkish", "Turkish Kitchen", "turkey")],
-          ["U": ("Ukranian", "Veselka", "ukraine")],
-          ["V": ("Vegan", "Franchia", "vegan")],
-          ["W": ("Whole Foods", "Whole Foods Market", "wholefoods")],
-          ["X": ("X'ian", "Xi'an Famous Foods", "plateSetting")],
-          ["Y": ("Yemeni", "Yemen Cuisine", "plateSetting")],
-          ["Z": ("Zürich (Swiss)", "Cafe Select", "plateSetting")]
-      ]
    
     struct RestaurantObjects {
         var restaurantLetter : String!
@@ -50,10 +21,15 @@ class AlphabetTableViewController: UITableViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = retroCoral
+        view.backgroundColor = retroGrey
         navigationController?.isNavigationBarHidden = true
         
      }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
 
     // MARK: - Table view data source
      override func numberOfSections(in tableView: UITableView) -> Int {
@@ -87,8 +63,10 @@ class AlphabetTableViewController: UITableViewController {
             if let dest = segue.destination as? RestaurantViewController, let indexPath = tableView.indexPathForSelectedRow {
                 
                 for (key, value) in alphabetArray[indexPath.row] {
-                    dest.cuisineName = value.0
-                    dest.restaurantName = value.1
+//                    dest.cuisineName = value.0
+//                    dest.restaurantName = value.1
+                    dest.cuisineName = "Click to edit cuisine"
+                    dest.restaurantName = "Click to edit restaurant"
                 }
             }
     }
