@@ -18,31 +18,6 @@
 		45F4884E1DA8529800DDA835 /* AlphabetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F4884D1DA8529800DDA835 /* AlphabetTableViewController.swift */; };
 		45F488501DA8538C00DDA835 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F4884F1DA8538C00DDA835 /* RestaurantViewController.swift */; };
 		45F488521DA86A7A00DDA835 /* AlphabetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F488511DA86A7A00DDA835 /* AlphabetCell.swift */; };
-		45F7B2991DAAF53600B505A0 /* america.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B2801DAAF53600B505A0 /* america.jpg */; };
-		45F7B29A1DAAF53600B505A0 /* belgium.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B2811DAAF53600B505A0 /* belgium.jpg */; };
-		45F7B29B1DAAF53600B505A0 /* dimsum.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B2821DAAF53600B505A0 /* dimsum.jpg */; };
-		45F7B29C1DAAF53600B505A0 /* greece.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B2831DAAF53600B505A0 /* greece.jpg */; };
-		45F7B29D1DAAF53600B505A0 /* hungary.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B2841DAAF53600B505A0 /* hungary.jpg */; };
-		45F7B29E1DAAF53600B505A0 /* israel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B2851DAAF53600B505A0 /* israel.jpg */; };
-		45F7B29F1DAAF53600B505A0 /* lebanon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B2861DAAF53600B505A0 /* lebanon.jpg */; };
-		45F7B2A01DAAF53600B505A0 /* nepal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B2871DAAF53600B505A0 /* nepal.jpg */; };
-		45F7B2A11DAAF53600B505A0 /* philippines.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B2881DAAF53600B505A0 /* philippines.jpg */; };
-		45F7B2A21DAAF53600B505A0 /* plateSetting.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B2891DAAF53600B505A0 /* plateSetting.jpg */; };
-		45F7B2A31DAAF53600B505A0 /* singapore.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B28A1DAAF53600B505A0 /* singapore.jpg */; };
-		45F7B2A41DAAF53600B505A0 /* vegan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B28B1DAAF53600B505A0 /* vegan.jpg */; };
-		45F7B2A51DAAF53600B505A0 /* wholefoods.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B28C1DAAF53600B505A0 /* wholefoods.jpg */; };
-		45F7B2A61DAAF53600B505A0 /* austria.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B28D1DAAF53600B505A0 /* austria.png */; };
-		45F7B2A71DAAF53600B505A0 /* china.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B28E1DAAF53600B505A0 /* china.png */; };
-		45F7B2A81DAAF53600B505A0 /* ecuador.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B28F1DAAF53600B505A0 /* ecuador.png */; };
-		45F7B2A91DAAF53600B505A0 /* ethiopia.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B2901DAAF53600B505A0 /* ethiopia.png */; };
-		45F7B2AA1DAAF53600B505A0 /* france.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B2911DAAF53600B505A0 /* france.png */; };
-		45F7B2AB1DAAF53600B505A0 /* japan.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B2921DAAF53600B505A0 /* japan.png */; };
-		45F7B2AC1DAAF53600B505A0 /* korea.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B2931DAAF53600B505A0 /* korea.png */; };
-		45F7B2AD1DAAF53600B505A0 /* morocco.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B2941DAAF53600B505A0 /* morocco.png */; };
-		45F7B2AE1DAAF53600B505A0 /* russia.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B2951DAAF53600B505A0 /* russia.png */; };
-		45F7B2AF1DAAF53600B505A0 /* turkey.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B2961DAAF53600B505A0 /* turkey.png */; };
-		45F7B2B01DAAF53600B505A0 /* ukraine.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B2971DAAF53600B505A0 /* ukraine.png */; };
-		45F7B2B11DAAF53600B505A0 /* china.svg in Resources */ = {isa = PBXBuildFile; fileRef = 45F7B2981DAAF53600B505A0 /* china.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,31 +34,6 @@
 		45F4884D1DA8529800DDA835 /* AlphabetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphabetTableViewController.swift; sourceTree = "<group>"; };
 		45F4884F1DA8538C00DDA835 /* RestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestaurantViewController.swift; path = ../RestaurantViewController.swift; sourceTree = "<group>"; };
 		45F488511DA86A7A00DDA835 /* AlphabetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphabetCell.swift; sourceTree = "<group>"; };
-		45F7B2801DAAF53600B505A0 /* america.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = america.jpg; sourceTree = SOURCE_ROOT; };
-		45F7B2811DAAF53600B505A0 /* belgium.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = belgium.jpg; sourceTree = SOURCE_ROOT; };
-		45F7B2821DAAF53600B505A0 /* dimsum.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dimsum.jpg; sourceTree = SOURCE_ROOT; };
-		45F7B2831DAAF53600B505A0 /* greece.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = greece.jpg; sourceTree = SOURCE_ROOT; };
-		45F7B2841DAAF53600B505A0 /* hungary.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hungary.jpg; sourceTree = SOURCE_ROOT; };
-		45F7B2851DAAF53600B505A0 /* israel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = israel.jpg; sourceTree = SOURCE_ROOT; };
-		45F7B2861DAAF53600B505A0 /* lebanon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lebanon.jpg; sourceTree = SOURCE_ROOT; };
-		45F7B2871DAAF53600B505A0 /* nepal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nepal.jpg; sourceTree = SOURCE_ROOT; };
-		45F7B2881DAAF53600B505A0 /* philippines.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = philippines.jpg; sourceTree = SOURCE_ROOT; };
-		45F7B2891DAAF53600B505A0 /* plateSetting.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plateSetting.jpg; sourceTree = SOURCE_ROOT; };
-		45F7B28A1DAAF53600B505A0 /* singapore.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = singapore.jpg; sourceTree = SOURCE_ROOT; };
-		45F7B28B1DAAF53600B505A0 /* vegan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vegan.jpg; sourceTree = SOURCE_ROOT; };
-		45F7B28C1DAAF53600B505A0 /* wholefoods.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wholefoods.jpg; sourceTree = SOURCE_ROOT; };
-		45F7B28D1DAAF53600B505A0 /* austria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = austria.png; sourceTree = SOURCE_ROOT; };
-		45F7B28E1DAAF53600B505A0 /* china.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = china.png; sourceTree = SOURCE_ROOT; };
-		45F7B28F1DAAF53600B505A0 /* ecuador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ecuador.png; sourceTree = SOURCE_ROOT; };
-		45F7B2901DAAF53600B505A0 /* ethiopia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ethiopia.png; sourceTree = SOURCE_ROOT; };
-		45F7B2911DAAF53600B505A0 /* france.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = france.png; sourceTree = SOURCE_ROOT; };
-		45F7B2921DAAF53600B505A0 /* japan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = japan.png; sourceTree = SOURCE_ROOT; };
-		45F7B2931DAAF53600B505A0 /* korea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = korea.png; sourceTree = SOURCE_ROOT; };
-		45F7B2941DAAF53600B505A0 /* morocco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = morocco.png; sourceTree = SOURCE_ROOT; };
-		45F7B2951DAAF53600B505A0 /* russia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = russia.png; sourceTree = SOURCE_ROOT; };
-		45F7B2961DAAF53600B505A0 /* turkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turkey.png; sourceTree = SOURCE_ROOT; };
-		45F7B2971DAAF53600B505A0 /* ukraine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ukraine.png; sourceTree = SOURCE_ROOT; };
-		45F7B2981DAAF53600B505A0 /* china.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = china.svg; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				45F488581DA87A1D00DDA835 /* Supporting Files */,
-				45F488551DA86BF100DDA835 /* Photo Assets */,
 				45F4883F1DA8525200DDA835 /* Main.storyboard */,
 				45009CFF1E09950800BDE128 /* TutorialViewController.swift */,
 				45009D011E09953C00BDE128 /* LoginViewController.swift */,
@@ -128,38 +77,6 @@
 				45009CFD1E09890500BDE128 /* Extensions.swift */,
 			);
 			path = NYC_EatTheAlphabet;
-			sourceTree = "<group>";
-		};
-		45F488551DA86BF100DDA835 /* Photo Assets */ = {
-			isa = PBXGroup;
-			children = (
-				45F7B2801DAAF53600B505A0 /* america.jpg */,
-				45F7B2811DAAF53600B505A0 /* belgium.jpg */,
-				45F7B2821DAAF53600B505A0 /* dimsum.jpg */,
-				45F7B2831DAAF53600B505A0 /* greece.jpg */,
-				45F7B2841DAAF53600B505A0 /* hungary.jpg */,
-				45F7B2851DAAF53600B505A0 /* israel.jpg */,
-				45F7B2861DAAF53600B505A0 /* lebanon.jpg */,
-				45F7B2871DAAF53600B505A0 /* nepal.jpg */,
-				45F7B2881DAAF53600B505A0 /* philippines.jpg */,
-				45F7B2891DAAF53600B505A0 /* plateSetting.jpg */,
-				45F7B28A1DAAF53600B505A0 /* singapore.jpg */,
-				45F7B28B1DAAF53600B505A0 /* vegan.jpg */,
-				45F7B28C1DAAF53600B505A0 /* wholefoods.jpg */,
-				45F7B28D1DAAF53600B505A0 /* austria.png */,
-				45F7B28E1DAAF53600B505A0 /* china.png */,
-				45F7B28F1DAAF53600B505A0 /* ecuador.png */,
-				45F7B2901DAAF53600B505A0 /* ethiopia.png */,
-				45F7B2911DAAF53600B505A0 /* france.png */,
-				45F7B2921DAAF53600B505A0 /* japan.png */,
-				45F7B2931DAAF53600B505A0 /* korea.png */,
-				45F7B2941DAAF53600B505A0 /* morocco.png */,
-				45F7B2951DAAF53600B505A0 /* russia.png */,
-				45F7B2961DAAF53600B505A0 /* turkey.png */,
-				45F7B2971DAAF53600B505A0 /* ukraine.png */,
-				45F7B2981DAAF53600B505A0 /* china.svg */,
-			);
-			name = "Photo Assets";
 			sourceTree = "<group>";
 		};
 		45F488581DA87A1D00DDA835 /* Supporting Files */ = {
@@ -234,34 +151,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				45009CFC1E09876D00BDE128 /* cj potter Handwriting.ttf in Resources */,
-				45F7B29E1DAAF53600B505A0 /* israel.jpg in Resources */,
-				45F7B2AF1DAAF53600B505A0 /* turkey.png in Resources */,
-				45F7B2991DAAF53600B505A0 /* america.jpg in Resources */,
 				45F488461DA8525200DDA835 /* LaunchScreen.storyboard in Resources */,
-				45F7B2A81DAAF53600B505A0 /* ecuador.png in Resources */,
-				45F7B2A61DAAF53600B505A0 /* austria.png in Resources */,
-				45F7B2AD1DAAF53600B505A0 /* morocco.png in Resources */,
-				45F7B29F1DAAF53600B505A0 /* lebanon.jpg in Resources */,
-				45F7B2A71DAAF53600B505A0 /* china.png in Resources */,
-				45F7B2AC1DAAF53600B505A0 /* korea.png in Resources */,
-				45F7B2AB1DAAF53600B505A0 /* japan.png in Resources */,
 				45F488431DA8525200DDA835 /* Assets.xcassets in Resources */,
-				45F7B2A31DAAF53600B505A0 /* singapore.jpg in Resources */,
-				45F7B2B11DAAF53600B505A0 /* china.svg in Resources */,
-				45F7B2A51DAAF53600B505A0 /* wholefoods.jpg in Resources */,
-				45F7B2B01DAAF53600B505A0 /* ukraine.png in Resources */,
-				45F7B29C1DAAF53600B505A0 /* greece.jpg in Resources */,
-				45F7B2A01DAAF53600B505A0 /* nepal.jpg in Resources */,
-				45F7B2AA1DAAF53600B505A0 /* france.png in Resources */,
-				45F7B2A91DAAF53600B505A0 /* ethiopia.png in Resources */,
-				45F7B2A21DAAF53600B505A0 /* plateSetting.jpg in Resources */,
-				45F7B2A41DAAF53600B505A0 /* vegan.jpg in Resources */,
-				45F7B29B1DAAF53600B505A0 /* dimsum.jpg in Resources */,
-				45F7B29D1DAAF53600B505A0 /* hungary.jpg in Resources */,
-				45F7B29A1DAAF53600B505A0 /* belgium.jpg in Resources */,
 				45F488411DA8525200DDA835 /* Main.storyboard in Resources */,
-				45F7B2AE1DAAF53600B505A0 /* russia.png in Resources */,
-				45F7B2A11DAAF53600B505A0 /* philippines.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

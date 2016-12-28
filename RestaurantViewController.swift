@@ -321,14 +321,9 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate, UINavigatio
             foodImage.image = selectedImage
             userChoseImage = true
             print("imagePickerController() - userChoseImage: \(userChoseImage)")
-            super.dismiss(animated: true, completion: {
-                
-                    print("view should dismiss")
-                
-                })
-            }
+            //       FirebaseManager.ref.child("users").child(FirebaseManager.currentUser).child("profilePic").setValue(["\()" : true])
+            super.dismiss(animated: true, completion:nil)
         }
-
-    
+    }
 
 }
