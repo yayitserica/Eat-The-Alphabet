@@ -89,6 +89,7 @@ class AlphabetTableViewController: UITableViewController {
         
         
         
+        
      }
 
     // MARK: - Table view data source
@@ -103,19 +104,13 @@ class AlphabetTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! AlphabetCell
-      
-        if let letterForLabel = restaurantArray[indexPath.row].restaurantLetter {
-            cell.letterLabel.text = String(letterForLabel)
-        }
         
-        //BAD CODE
         let letterDict = alphabetArray[indexPath.row]
-        
-//         cell.letterLabel.text = String(describing: letterLabel)
-        
-        if let cuisineForLabel = restaurantArray[indexPath.row].restaurantCuisine {
-            cell.suggestedCuisineLabel.text = String(cuisineForLabel.0)
+        for (key, value) in letterDict {
+            cell.letterLabel.text = key
+            cell.suggestedCuisineLabel.text = value.0
         }
+        
         return cell
     }
   
@@ -127,12 +122,11 @@ class AlphabetTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier != "toRestaurant" { return }
             if let dest = segue.destination as? RestaurantViewController, let indexPath = tableView.indexPathForSelectedRow {
-//                print(dest)
-                print(indexPath)
-                dest.cuisineName = restaurantArray[indexPath.row].restaurantCuisine.0
-//                print(dest.cuisineName)
-                dest.restaurantName = restaurantArray[indexPath.row].restaurantCuisine.1
-//                print(dest.restaurantName)
+                
+                for (key, value) in alphabetArray[indexPath.row] {
+                    dest.cuisineName = value.0
+                    dest.restaurantName = value.1
+                }
             }
     }
 }
