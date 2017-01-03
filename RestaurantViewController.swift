@@ -8,8 +8,13 @@
 
 import UIKit
 import MapKit
+import CoreData
 
 class RestaurantViewController: UIViewController, MKMapViewDelegate, UINavigationControllerDelegate,UIImagePickerControllerDelegate {
+    
+    let store = DataStore.sharedInstance
+    var newLetter: Letter = Letter()
+    
     
     @IBOutlet weak var cuisineLabel: UILabel!
     @IBOutlet weak var restaurantLabel: UILabel!
@@ -47,6 +52,10 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate, UINavigatio
         //sets up map
         restaurantMap.delegate = self
         setupViews()
+        
+        //initalizes letter
+        newLetter = NSEntityDescription.insertNewObject(forEntityName: "Letter", into: self.store.persistentContainer.viewContext) as! Letter
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -109,8 +118,10 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate, UINavigatio
             print("the user entered \(cuisineField)")
             guard let cuisine = cuisineField.text else { return }
             
-            //TODO: - save this cuisine below to 1) core data and 2) have it persist on the screen
             self.cuisineLabel.text = cuisine
+            
+            //saves cuisine to core data
+            self.newLetter.cuisine = cuisine
         }
         
         enterCuisineAlert.addTextField { (textField) in
@@ -143,8 +154,8 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate, UINavigatio
             print("the user entered \(restaurantField)")
             guard let restaurant = restaurantField.text else { return }
             
-            //TODO: - save this cuisine below to 1) core data and 2) have it persist on the screen
             self.restaurantLabel.text = restaurant
+            self.newLetter.restaurant = restaurant
         }
         
         enterRestaurantAlert.addTextField { (textField) in
@@ -178,6 +189,7 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate, UINavigatio
             
             //TODO: - save this cuisine below to 1) core data and 2) have it persist on the screen
             self.friendsLabel.text = friends
+            self.newLetter.whoIAteWith = friends
         }
         
         enterFriendsAlert.addTextField { (textField) in
@@ -215,8 +227,8 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate, UINavigatio
             print("the user entered \(setFoodField)")
             guard let foods = setFoodField.text else { return }
             
-            //TODO: - save this cuisine below to 1) core data and 2) have it persist on the screen
             self.foodLabel.text = foods
+            self.newLetter.whatIAte = foods
         }
         
         setFoodAlert.addTextField { (textField) in
@@ -250,6 +262,8 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate, UINavigatio
             
             //TODO: - save this cuisine below to 1) core data and 2) have it persist on the screen
             self.dateLabel.text = date
+            self.newLetter.date = date
+            
         }
         
         setDateAlert.addTextField { (textField) in

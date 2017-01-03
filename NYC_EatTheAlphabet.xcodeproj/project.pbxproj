@@ -11,6 +11,8 @@
 		45009CFE1E09890500BDE128 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45009CFD1E09890500BDE128 /* Extensions.swift */; };
 		45009D001E09950800BDE128 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45009CFF1E09950800BDE128 /* TutorialViewController.swift */; };
 		45009D021E09953C00BDE128 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45009D011E09953C00BDE128 /* LoginViewController.swift */; };
+		4500B3A51E1C13700025ADAA /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4500B3A41E1C13700025ADAA /* DataStore.swift */; };
+		4500B3A81E1C14D80025ADAA /* EatTheAlphabet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4500B3A61E1C14D80025ADAA /* EatTheAlphabet.xcdatamodeld */; };
 		45F4883C1DA8525200DDA835 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F4883B1DA8525200DDA835 /* AppDelegate.swift */; };
 		45F488411DA8525200DDA835 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45F4883F1DA8525200DDA835 /* Main.storyboard */; };
 		45F488431DA8525200DDA835 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45F488421DA8525200DDA835 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 		45009CFD1E09890500BDE128 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		45009CFF1E09950800BDE128 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		45009D011E09953C00BDE128 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4500B3A41E1C13700025ADAA /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		4500B3A71E1C14D80025ADAA /* EatTheAlphabet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EatTheAlphabet.xcdatamodel; sourceTree = "<group>"; };
 		45F488381DA8525200DDA835 /* NYC_EatTheAlphabet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYC_EatTheAlphabet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F4883B1DA8525200DDA835 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45F488401DA8525200DDA835 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 				45F488511DA86A7A00DDA835 /* AlphabetCell.swift */,
 				45009CFB1E09875000BDE128 /* cj potter Handwriting.ttf */,
 				45009CFD1E09890500BDE128 /* Extensions.swift */,
+				4500B3A41E1C13700025ADAA /* DataStore.swift */,
+				4500B3A61E1C14D80025ADAA /* EatTheAlphabet.xcdatamodeld */,
 			);
 			path = NYC_EatTheAlphabet;
 			sourceTree = "<group>";
@@ -165,6 +171,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				45F4883C1DA8525200DDA835 /* AppDelegate.swift in Sources */,
+				4500B3A51E1C13700025ADAA /* DataStore.swift in Sources */,
+				4500B3A81E1C14D80025ADAA /* EatTheAlphabet.xcdatamodeld in Sources */,
 				45009D001E09950800BDE128 /* TutorialViewController.swift in Sources */,
 				45009CFE1E09890500BDE128 /* Extensions.swift in Sources */,
 				45009D021E09953C00BDE128 /* LoginViewController.swift in Sources */,
@@ -337,6 +345,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4500B3A61E1C14D80025ADAA /* EatTheAlphabet.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4500B3A71E1C14D80025ADAA /* EatTheAlphabet.xcdatamodel */,
+			);
+			currentVersion = 4500B3A71E1C14D80025ADAA /* EatTheAlphabet.xcdatamodel */;
+			path = EatTheAlphabet.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 45F488301DA8525200DDA835 /* Project object */;
 }
